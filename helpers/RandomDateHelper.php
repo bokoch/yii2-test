@@ -17,6 +17,8 @@ class RandomDateHelper
 
         $randomDateInt = rand($firstDayOfYear, $lastDayOfYear);
 
-        return $randomDateInt;
+        $formatRandomDate = date('Y-m-d H:m:s', $randomDateInt);
+
+        return $formatRandomDate;
     }
 }

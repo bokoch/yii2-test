@@ -14,7 +14,7 @@ class m181128_145155_create_logs_table extends Migration
     {
         $this->createTable('logs', [
             'id' => $this->primaryKey(),
-            'time' => $this->integer(11),
+            'time' => $this->dateTime(),
             'key' => $this->char(8),
         ]);
     }
