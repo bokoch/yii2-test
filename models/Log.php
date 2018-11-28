@@ -1,7 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 28.11.18
- * Time: 17:31
- */
+namespace app\models;
+
+use yii\db\ActiveRecord;
+
+class Log extends ActiveRecord
+{
+    /**
+     * @return string the name of the table associated with this ActiveRecord class.
+     */
+    public static function tableName()
+    {
+        return '{{logs}}';
+    }
+}
