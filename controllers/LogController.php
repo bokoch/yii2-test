@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\helpers\RandomDateHelper;
 use app\models\Log;
 use Yii;
 use yii\helpers\Url;
@@ -23,7 +24,7 @@ class LogController extends Controller
         // Generate 200 logs records
         for ($i = 0; $i < 200; $i++) {
             $log = new Log();
-            $log->time = 11111;
+            $log->time = RandomDateHelper::generateRandomDate();
             $log->key = Yii::$app->security->generateRandomString(8);
             $log->save();
         }
